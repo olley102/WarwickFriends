@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Friends.Views.StarSectionHome">
+    <ContentView.Content>
+        <StackLayout Padding="10" VerticalOptions="StartAndExpand">
+            <!-- Top controls -->
+            <Frame BackgroundColor="#FF00A6FF"
+                   WidthRequest="270"
+                   HeightRequest="106"
+                   CornerRadius="10"
+                   Margin="10, 20, 10, 10"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                <Label Text="Find a study group"
+                       FontSize="20"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <Frame BackgroundColor="#FF77D353"
+                   WidthRequest="270"
+                   HeightRequest="106"
+                   CornerRadius="10"
+                   Margin="10"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                <Label Text="Find a society group"
+                       FontSize="20"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+
+            <Frame BackgroundColor="#FFF95F62"
+                   WidthRequest="270"
+                   HeightRequest="106"
+                   CornerRadius="10"
+                   Margin="10"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center">
+                <Label Text="Find a friendship group"
+                       FontSize="20"
+                       TextColor="White"
+                       FontAttributes="Bold"/>
+            </Frame>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

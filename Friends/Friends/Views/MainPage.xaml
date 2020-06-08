@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:views="clr-namespace:Friends.Views"
+             x:Class="Friends.Views.MainPage">
+
+    <StackLayout>
+
+        <Frame x:Name="MainContent"
+               VerticalOptions="StartAndExpand"
+               BackgroundColor="Transparent"
+               Padding="0">
+            
+        </Frame>
+
+        <Frame x:Name="TabContent"
+               VerticalOptions="End"
+               BackgroundColor="Transparent"
+               Padding="0">
+            <Frame BackgroundColor="#FFEFF2F7"
+               HeightRequest="60"
+               VerticalOptions="End"
+               HorizontalOptions="FillAndExpand"
+               Padding="0">
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton x:Name="ibtn_mygroups"
+                             BackgroundColor="#00000000"
+                             Opacity="0.5"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             Padding="15"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Clicked="ibtn_mygroups_Clicked"/>
+                    <ImageButton x:Name="ibtn_main"
+                             BackgroundColor="#00000000"
+                             Opacity="1"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             Padding="15"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Clicked="ibtn_main_Clicked"/>
+                    <ImageButton x:Name="ibtn_myprofile"
+                             BackgroundColor="#00000000"
+                             Opacity="0.5"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             Padding="15"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Clicked="ibtn_myprofile_Clicked"/>
+                </StackLayout>
+            </Frame>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
