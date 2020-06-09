@@ -5,9 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Friends.Views.StarSectionStudyGroup">
-  <ContentView.Content>
-      <StackLayout Padding="10">
-          <Label Text="How about this group?" FontSize="20" />
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#FFEFF2F7"
+                   HasShadow="False"
+                   VerticalOptions="Start"
+                   Padding="10">
+                <ImageButton x:Name="ibtn_back"
+                       BackgroundColor="Transparent"
+                       WidthRequest="35"
+                       HeightRequest="35"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Start"/>
+            </Frame>
+            <ScrollView>
+                <StackLayout Padding="20">
+                    <Label Text="How about this group?" FontSize="20" />
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

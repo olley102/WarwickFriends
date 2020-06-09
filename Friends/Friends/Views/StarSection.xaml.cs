@@ -39,6 +39,9 @@ namespace Friends.Views
         {
             star_study = new StarSectionStudyGroup();
             setStarContent(star_study);
+
+            ImageButton ibtn_back = star_study.FindByName<ImageButton>("ibtn_back");
+            ibtn_back.Clicked += (s, _e) => setStarHome();
         }
     }
 }

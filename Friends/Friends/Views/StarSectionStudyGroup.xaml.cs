@@ -15,6 +15,8 @@ namespace Friends.Views
         public StarSectionStudyGroup()
         {
             InitializeComponent();
+
+            ibtn_back.Source = ImageSource.FromResource("Friends.Resources.round_back.png");
         }
     }
 }

@@ -6,9 +6,9 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.StarSectionHome">
     <ContentView.Content>
-        <StackLayout Padding="10">
-            <!-- Top controls -->
-            <Frame x:Name="frame_find_study"
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Frame x:Name="frame_find_study"
                    BackgroundColor="#FF00A6FF"
                    WidthRequest="270"
                    HeightRequest="106"
@@ -16,37 +16,38 @@
                    Margin="10, 20, 10, 10"
                    VerticalOptions="Center"
                    HorizontalOptions="Center">
-                <Label Text="Find a study group"
+                    <Label Text="Find a study group"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="Bold"/>
-            </Frame>
+                </Frame>
 
-            <Frame BackgroundColor="#FF77D353"
+                <Frame BackgroundColor="#FF77D353"
                    WidthRequest="270"
                    HeightRequest="106"
                    CornerRadius="10"
                    Margin="10"
                    VerticalOptions="Center"
                    HorizontalOptions="Center">
-                <Label Text="Find a society group"
+                    <Label Text="Find a society group"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="Bold"/>
-            </Frame>
+                </Frame>
 
-            <Frame BackgroundColor="#FFF95F62"
+                <Frame BackgroundColor="#FFF95F62"
                    WidthRequest="270"
                    HeightRequest="106"
                    CornerRadius="10"
                    Margin="10"
                    VerticalOptions="Center"
                    HorizontalOptions="Center">
-                <Label Text="Find a friendship group"
+                    <Label Text="Find a friendship group"
                        FontSize="20"
                        TextColor="White"
                        FontAttributes="Bold"/>
-            </Frame>
-        </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentView.Content>
 </ContentView>
