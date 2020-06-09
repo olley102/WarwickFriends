@@ -6,9 +6,10 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.StarSectionHome">
     <ContentView.Content>
-        <StackLayout Padding="10" VerticalOptions="StartAndExpand">
+        <StackLayout Padding="10">
             <!-- Top controls -->
-            <Frame BackgroundColor="#FF00A6FF"
+            <Frame x:Name="frame_find_study"
+                   BackgroundColor="#FF00A6FF"
                    WidthRequest="270"
                    HeightRequest="106"
                    CornerRadius="10"

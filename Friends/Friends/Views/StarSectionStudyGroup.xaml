@@ -3,14 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:views="clr-namespace:Friends.Views"
              mc:Ignorable="d"
-             x:Class="Friends.Views.StarSection">
-    <ContentView.Content>
-        <Frame x:Name="StarContent"
-               BackgroundColor="Transparent"
-               Padding="0">
-            <!-- Content to be filled by code behind -->
-        </Frame>
-    </ContentView.Content>
+             x:Class="Friends.Views.StarSectionStudyGroup">
+  <ContentView.Content>
+      <StackLayout Padding="10">
+          <Label Text="How about this group?" FontSize="20" />
+      </StackLayout>
+  </ContentView.Content>
 </ContentView>

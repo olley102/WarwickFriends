@@ -13,9 +13,10 @@ namespace Friends.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        ContentView star_section;
-        ContentView my_groups;
-        ContentView my_profile;
+        StarSection star_section;
+        MyGroupsSection my_groups;
+        MyProfileSection my_profile;
+        int current_view;
         public MainPage()
         {
             InitializeComponent();
@@ -29,34 +30,56 @@ namespace Friends.Views
             my_profile = new MyProfileSection();
 
             setMainContent(star_section);
+            current_view = 1;
         }
-
         private void ibtn_mygroups_Clicked(object sender, EventArgs e)
         {
-            ibtn_mygroups.Opacity = 1;
-            ibtn_main.Opacity = 0.5;
-            ibtn_myprofile.Opacity = 0.5;
+            if (current_view == 0)
+            {
+                // my_groups.setMyGroupsHome();
+            }
+            else
+            {
+                ibtn_mygroups.Opacity = 1;
+                ibtn_main.Opacity = 0.5;
+                ibtn_myprofile.Opacity = 0.5;
 
-            setMainContent(my_groups);
+                setMainContent(my_groups);
+                current_view = 0;
+            }
         }
-
         private void ibtn_main_Clicked(object sender, EventArgs e)
         {
-            ibtn_mygroups.Opacity = 0.5;
-            ibtn_main.Opacity = 1;
-            ibtn_myprofile.Opacity = 0.5;
+            if (current_view == 1)
+            {
+                star_section.setStarHome();
+            }
+            else
+            {
+                ibtn_mygroups.Opacity = 0.5;
+                ibtn_main.Opacity = 1;
+                ibtn_myprofile.Opacity = 0.5;
 
-            setMainContent(star_section);
+                setMainContent(star_section);
+                current_view = 1;
+            }
         }
         private void ibtn_myprofile_Clicked(object sender, EventArgs e)
         {
-            ibtn_mygroups.Opacity = 0.5;
-            ibtn_main.Opacity = 0.5;
-            ibtn_myprofile.Opacity = 1;
+            if (current_view == 2)
+            {
+                // my_profile.setMyProfileHome();
+            }
+            else
+            {
+                ibtn_mygroups.Opacity = 0.5;
+                ibtn_main.Opacity = 0.5;
+                ibtn_myprofile.Opacity = 1;
 
-            setMainContent(my_profile);
+                setMainContent(my_profile);
+                current_view = 2;
+            }
         }
-
         public void setMainContent(ContentView content)
         {
             MainContent.Content = content;
