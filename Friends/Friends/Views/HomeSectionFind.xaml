@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Friends.Views.StarSectionStudyGroup">
+             x:Class="Friends.Views.HomeSectionFind">
     <ContentView.Content>
         <StackLayout>
             <Frame BackgroundColor="#FFEFF2F7"
@@ -12,15 +12,18 @@
                    VerticalOptions="Start"
                    Padding="10">
                 <ImageButton x:Name="ibtn_back"
-                       BackgroundColor="Transparent"
-                       WidthRequest="35"
-                       HeightRequest="35"
-                       HorizontalOptions="Start"
-                       VerticalOptions="Start"/>
+                             BackgroundColor="Transparent"
+                             Opacity="0.5"
+                             WidthRequest="35"
+                             HeightRequest="35"
+                             HorizontalOptions="Start"
+                             VerticalOptions="Start"/>
             </Frame>
             <ScrollView>
                 <StackLayout Padding="20">
-                    <Label Text="How about this group?" FontSize="20" />
+                    <Label x:Name="label_find_header"
+                           Text="Find a study group"
+                           FontSize="20" />
                 </StackLayout>
             </ScrollView>
         </StackLayout>

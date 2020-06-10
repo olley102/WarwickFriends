@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace Friends.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class StarSectionStudyGroup : ContentView
+    public partial class SearchSection : ContentView
     {
-        public StarSectionStudyGroup()
+        public SearchSection()
         {
             InitializeComponent();
-
-            ibtn_back.Source = ImageSource.FromResource("Friends.Resources.round_back.png");
         }
     }
 }

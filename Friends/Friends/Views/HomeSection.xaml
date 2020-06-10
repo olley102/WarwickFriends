@@ -5,9 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:views="clr-namespace:Friends.Views"
              mc:Ignorable="d"
-             x:Class="Friends.Views.StarSection">
+             x:Class="Friends.Views.HomeSection">
     <ContentView.Content>
-        <Frame x:Name="StarContent"
+        <Frame x:Name="HomeContent"
                BackgroundColor="Transparent"
                Padding="0">
             <!-- Content to be filled by code behind -->

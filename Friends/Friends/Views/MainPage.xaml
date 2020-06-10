@@ -23,6 +23,25 @@
                HorizontalOptions="FillAndExpand"
                Padding="0">
             <StackLayout Orientation="Horizontal">
+                
+                <ImageButton x:Name="ibtn_home"
+                             BackgroundColor="Transparent"
+                             Opacity="1"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             Padding="15"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Clicked="ibtn_home_Clicked"/>
+                <ImageButton x:Name="ibtn_search"
+                             BackgroundColor="Transparent"
+                             Opacity="0.5"
+                             WidthRequest="60"
+                             HeightRequest="60"
+                             Padding="15"
+                             HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="Center"
+                             Clicked="ibtn_search_Clicked"/>
                 <ImageButton x:Name="ibtn_mygroups"
                              BackgroundColor="Transparent"
                              Opacity="0.5"
@@ -32,15 +51,6 @@
                              HorizontalOptions="CenterAndExpand"
                              VerticalOptions="Center"
                              Clicked="ibtn_mygroups_Clicked"/>
-                <ImageButton x:Name="ibtn_main"
-                             BackgroundColor="Transparent"
-                             Opacity="1"
-                             WidthRequest="60"
-                             HeightRequest="60"
-                             Padding="15"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="Center"
-                             Clicked="ibtn_main_Clicked"/>
                 <ImageButton x:Name="ibtn_myprofile"
                              BackgroundColor="Transparent"
                              Opacity="0.5"
@@ -50,6 +60,7 @@
                              HorizontalOptions="CenterAndExpand"
                              VerticalOptions="Center"
                              Clicked="ibtn_myprofile_Clicked"/>
+                
             </StackLayout>
         </Frame>
 

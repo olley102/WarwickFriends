@@ -11,17 +11,37 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\main.png" />
-    <None Remove="Resources\mygroups.png" />
-    <None Remove="Resources\myprofile.png" />
-    <None Remove="Resources\round_back.png" />
+    <None Remove="Resources\back_black.png" />
+    <None Remove="Resources\coffee_black.png" />
+    <None Remove="Resources\coffee_white.png" />
+    <None Remove="Resources\coffee_white_outline.png" />
+    <None Remove="Resources\grad_black.png" />
+    <None Remove="Resources\grad_white.png" />
+    <None Remove="Resources\grad_white_outline.png" />
+    <None Remove="Resources\group_black.png" />
+    <None Remove="Resources\heart_black.png" />
+    <None Remove="Resources\heart_white.png" />
+    <None Remove="Resources\heart_white_outline.png" />
+    <None Remove="Resources\home_black.png" />
+    <None Remove="Resources\profile_black.png" />
+    <None Remove="Resources\search_black.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\main.png" />
-    <EmbeddedResource Include="Resources\mygroups.png" />
-    <EmbeddedResource Include="Resources\myprofile.png" />
-    <EmbeddedResource Include="Resources\round_back.png" />
+    <EmbeddedResource Include="Resources\back_black.png" />
+    <EmbeddedResource Include="Resources\coffee_black.png" />
+    <EmbeddedResource Include="Resources\coffee_white.png" />
+    <EmbeddedResource Include="Resources\coffee_white_outline.png" />
+    <EmbeddedResource Include="Resources\grad_black.png" />
+    <EmbeddedResource Include="Resources\grad_white.png" />
+    <EmbeddedResource Include="Resources\grad_white_outline.png" />
+    <EmbeddedResource Include="Resources\group_black.png" />
+    <EmbeddedResource Include="Resources\heart_black.png" />
+    <EmbeddedResource Include="Resources\heart_white.png" />
+    <EmbeddedResource Include="Resources\heart_white_outline.png" />
+    <EmbeddedResource Include="Resources\home_black.png" />
+    <EmbeddedResource Include="Resources\profile_black.png" />
+    <EmbeddedResource Include="Resources\search_black.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,20 +54,32 @@
     <EmbeddedResource Update="Views\MyGroupsSection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StarSection.xaml">
+    <EmbeddedResource Update="Views\HomeSection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StarSectionHome.xaml">
+    <EmbeddedResource Update="Views\HomeSectionHome.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\StarSectionStudyGroup.xaml">
+    <EmbeddedResource Update="Views\HomeSectionFind.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\SearchSection.xaml.cs">
+      <DependentUpon>SearchSection.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\MyProfileSection.xaml.cs">
       <DependentUpon>MyProfileSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomeSection.xaml.cs">
+      <DependentUpon>HomeSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomeSectionHome.xaml.cs">
+      <DependentUpon>HomeSectionHome.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HomeSectionFind.xaml.cs">
+      <DependentUpon>HomeSectionFind.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
