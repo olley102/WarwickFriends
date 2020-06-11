@@ -19,5 +19,9 @@ namespace Friends.Views
             label_member_first_name.Text = first_name;
             label_member_course.Text = course_name;
         }
+        public void SetViewButtonAction(Action view_btn_action)
+        {
+            btn_member_view.Clicked += (s, e) => view_btn_action();
+        }
     }
 }

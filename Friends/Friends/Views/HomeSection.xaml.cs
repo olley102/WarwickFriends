@@ -77,12 +77,23 @@ namespace Friends.Views
         {
             SetHomeContent(home_home);
         }
+        private void BackBtnHandler()
+        {
+            if (!home_find.at_home)
+            {
+                home_find.SetFindHome();
+            }
+            else
+            {
+                SetHomeHome();
+            }
+        }
         private void SetHomeFind(int find_view_num)
         {
             home_find = new HomeSectionFind();
             SetHomeContent(home_find);
             ImageButton ibtn_back = home_find.FindByName<ImageButton>("ibtn_back");
-            ibtn_back.Clicked += (s, _e) => SetHomeHome();
+            ibtn_back.Clicked += (s, _e) => BackBtnHandler();
             home_find.SetFindView(find_view_num, num_members);
         }
         private void AdjustNumMembers()

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Friends.Views.HomeSectionFindGroup">
+    <ContentView.Content>
+        <StackLayout Padding="20">
+            <Label x:Name="label_find_header"
+                       Text="Find a friendship group"
+                       FontSize="20" />
+
+            <ScrollView>
+                <StackLayout x:Name="stack_member_list">
+                    <!-- to be filled -->
+                </StackLayout>
+            </ScrollView>
+
+            <StackLayout Orientation="Horizontal"
+                             HorizontalOptions="Center"
+                             VerticalOptions="End"
+                             Margin="0, 20, 0, 0">
+                <Frame x:Name="frame_tap_cross"
+                           HorizontalOptions="CenterAndExpand"
+                           BackgroundColor="#FFF95F62"
+                           Padding="10"
+                           Margin="0, 0, 10, 0"
+                           CornerRadius="30">
+                    <Image x:Name="img_cross"
+                               WidthRequest="40"
+                               HeightRequest="40"/>
+                </Frame>
+                <Frame x:Name="frame_tap_check"
+                           HorizontalOptions="CenterAndExpand"
+                           BackgroundColor="#FF77D353"
+                           Padding="10"
+                           CornerRadius="30"
+                           Margin="10, 0, 0, 0">
+                    <Image x:Name="img_check"
+                               WidthRequest="40"
+                               HeightRequest="40"/>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
