@@ -26,7 +26,7 @@ namespace Friends.Views
             home_home.min_members = min_members;
 
             num_members = 4;
-            SetHomeFind(0);
+            SetHomeFind(2);
 
             TapGestureRecognizer studyTapRecognizer = new TapGestureRecognizer();
             studyTapRecognizer.Tapped += (s, e) => SetHomeFind(0);

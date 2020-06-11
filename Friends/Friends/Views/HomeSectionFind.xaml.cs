@@ -19,6 +19,8 @@ namespace Friends.Views
             InitializeComponent();
 
             ibtn_back.Source = ImageSource.FromResource("Friends.Resources.back_black.png");
+            img_cross.Source = ImageSource.FromResource("Friends.Resources.cross_white.png");
+            img_check.Source = ImageSource.FromResource("Friends.Resources.check_white.png");
 
             member_peek_list = new List<MemberPeek>();
         }
@@ -41,7 +43,6 @@ namespace Friends.Views
             for (int i = 0; i < num_members; i++)
             {
                 MemberPeek temp_member_peek = new MemberPeek();
-                temp_member_peek.SetThemeFromViewNum(find_view_num);
                 member_peek_list.Add(temp_member_peek);
                 stack_member_list.Children.Add(temp_member_peek);
             }
