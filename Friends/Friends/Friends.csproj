@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\add_black.png" />
     <None Remove="Resources\back_black.png" />
     <None Remove="Resources\coffee_black.png" />
     <None Remove="Resources\coffee_white.png" />
@@ -23,11 +24,14 @@
     <None Remove="Resources\heart_white.png" />
     <None Remove="Resources\heart_white_outline.png" />
     <None Remove="Resources\home_black.png" />
+    <None Remove="Resources\person_black.png" />
     <None Remove="Resources\profile_black.png" />
+    <None Remove="Resources\remove_black.png" />
     <None Remove="Resources\search_black.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Resources\add_black.png" />
     <EmbeddedResource Include="Resources\back_black.png" />
     <EmbeddedResource Include="Resources\coffee_black.png" />
     <EmbeddedResource Include="Resources\coffee_white.png" />
@@ -40,7 +44,9 @@
     <EmbeddedResource Include="Resources\heart_white.png" />
     <EmbeddedResource Include="Resources\heart_white_outline.png" />
     <EmbeddedResource Include="Resources\home_black.png" />
+    <EmbeddedResource Include="Resources\person_black.png" />
     <EmbeddedResource Include="Resources\profile_black.png" />
+    <EmbeddedResource Include="Resources\remove_black.png" />
     <EmbeddedResource Include="Resources\search_black.png" />
   </ItemGroup>
 
@@ -51,6 +57,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Views\MemberPeek.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\MyGroupsSection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

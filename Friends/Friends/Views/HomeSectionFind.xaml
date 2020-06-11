@@ -19,13 +19,19 @@
                              HorizontalOptions="Start"
                              VerticalOptions="Start"/>
             </Frame>
-            <ScrollView>
-                <StackLayout Padding="20">
-                    <Label x:Name="label_find_header"
+            
+            <StackLayout Padding="20">
+                <Label x:Name="label_find_header"
                            Text="Find a study group"
                            FontSize="20" />
-                </StackLayout>
-            </ScrollView>
+
+                <ScrollView>
+                    <StackLayout x:Name="stack_member_list">
+                        <!-- to be filled -->
+                    </StackLayout>
+                </ScrollView>
+
+            </StackLayout>
         </StackLayout>
     </ContentView.Content>
 </ContentView>

@@ -13,10 +13,11 @@
                 
                 <StackLayout Margin="0, 20, 0, 0"
                              Orientation="Horizontal"
+                             WidthRequest="300"
+                             HorizontalOptions="Center"
                              VerticalOptions="CenterAndExpand">
                     
-                    <StackLayout HorizontalOptions="CenterAndExpand"
-                                 VerticalOptions="CenterAndExpand">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
                         <Frame x:Name="frame_tap_study"
                                HorizontalOptions="Center"
                                CornerRadius="60"
@@ -32,8 +33,7 @@
                                Text="Study group"/>
                     </StackLayout>
                     
-                    <StackLayout HorizontalOptions="CenterAndExpand"
-                                 VerticalOptions="CenterAndExpand">
+                    <StackLayout HorizontalOptions="CenterAndExpand">
                         <Frame x:Name="frame_tap_society"
                                HorizontalOptions="Center"
                                CornerRadius="60"
@@ -68,7 +68,38 @@
                     <Label HorizontalOptions="Center"
                            Text="Friendship group"/>
                 </StackLayout>
-                
+
+                <Frame Margin="0, 20, 0, 0"
+                       Padding="0">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Number of members"
+                               HorizontalOptions="StartAndExpand"
+                               Margin="20, 20, 0, 20"/>
+                        <Frame x:Name="frame_tap_minus"
+                               BackgroundColor="Transparent"
+                               Padding="20"
+                               HorizontalOptions="End"
+                               CornerRadius="20">
+                            <Image x:Name="img_minus"
+                                   WidthRequest="20"
+                                   HeightRequest="20"/>
+                        </Frame>
+                        <Label x:Name="label_num_members"
+                               Text="4"
+                               HorizontalOptions="End"
+                               Margin="0, 20, 0, 20"/>
+                        <Frame x:Name="frame_tap_add"
+                               BackgroundColor="Transparent"
+                               Padding="20"
+                               HorizontalOptions="End"
+                               CornerRadius="20">
+                            <Image x:Name="img_add"
+                                   WidthRequest="20"
+                                   HeightRequest="20"/>
+                        </Frame>
+                    </StackLayout>
+                </Frame>
+
             </StackLayout>
         </ScrollView>
     </ContentView.Content>
