@@ -14,7 +14,7 @@ namespace Friends.Views
 
             img_member_avatar.Source = ImageSource.FromResource("Friends.Resources.person_black.png");
         }
-        public void SetMemberInfo(String first_name, String course_name)
+        public void SetMemberInfo(string first_name, string course_name)
         {
             label_member_first_name.Text = first_name;
             label_member_course.Text = course_name;

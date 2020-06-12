@@ -4,10 +4,10 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Friends.Views.HomeSectionFindMember">
+             x:Class="Friends.Views.MyGroupsSectionList">
   <ContentView.Content>
       <StackLayout>
-          <Label Text="Member view" />
+          <Label Text="Hello Xamarin.Forms!" />
       </StackLayout>
   </ContentView.Content>
 </ContentView>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Friends.Views.HomeSectionPrefs">
+    <ContentView.Content>
+        <StackLayout>
+
+            <Frame x:Name="BackBtnContent"
+                   BackgroundColor="Transparent"
+                   Padding="0">
+                <!-- Content to be filled by code behind -->
+            </Frame>
+
+            <ScrollView>
+                <StackLayout Padding="20">
+                    <Label x:Name="label_prefs_header"
+                   Text="Preferences"
+                   FontSize="20" />
+                    <Frame Margin="0, 20, 0, 0"
+                       Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Number of members"
+                               HorizontalOptions="StartAndExpand"
+                               Margin="20, 20, 0, 20"/>
+                            <Frame x:Name="frame_tap_minus"
+                               BackgroundColor="Transparent"
+                               Padding="20"
+                               HorizontalOptions="End"
+                               CornerRadius="20">
+                                <Image x:Name="img_minus"
+                                   WidthRequest="20"
+                                   HeightRequest="20"/>
+                            </Frame>
+                            <Label x:Name="label_num_members"
+                               Text="4"
+                               HorizontalOptions="End"
+                               Margin="0, 20, 0, 20"/>
+                            <Frame x:Name="frame_tap_add"
+                               BackgroundColor="Transparent"
+                               Padding="20"
+                               HorizontalOptions="End"
+                               CornerRadius="20">
+                                <Image x:Name="img_add"
+                                   WidthRequest="20"
+                                   HeightRequest="20"/>
+                            </Frame>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

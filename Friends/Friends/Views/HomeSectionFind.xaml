@@ -6,63 +6,51 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.HomeSectionFind">
     <ContentView.Content>
-        <StackLayout>
-            <Frame BackgroundColor="#FFEFF2F7"
-                   HasShadow="False"
-                   VerticalOptions="Start"
-                   Padding="10">
-                <ImageButton x:Name="ibtn_back"
+        <StackLayout Padding="20">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label x:Name="label_find_header"
+                       HorizontalOptions="StartAndExpand"
+                   Text="Find a friendship group"
+                   FontSize="20" />
+                <ImageButton x:Name="ibtn_prefs"
                              BackgroundColor="Transparent"
                              Opacity="0.5"
                              WidthRequest="35"
                              HeightRequest="35"
-                             HorizontalOptions="Start"
-                             VerticalOptions="Start"/>
-            </Frame>
+                             HorizontalOptions="End"/>
+            </StackLayout>
 
-            <Frame x:Name="FindContent"
-                   BackgroundColor="Transparent"
-                   Padding="0">
-                <!-- Content to be filled by code behind -->
-            </Frame>
+            <ScrollView>
+                <StackLayout x:Name="stack_member_list">
+                    <!-- to be filled -->
+                </StackLayout>
+            </ScrollView>
 
-            <!--<StackLayout Padding="20">
-                <Label x:Name="label_find_header"
-                       Text="Find a friendship group"
-                       FontSize="20" />
-
-                <ScrollView>
-                    <StackLayout x:Name="stack_member_list">
-                        --><!-- to be filled --><!--
-                    </StackLayout>
-                </ScrollView>
-
-                <StackLayout Orientation="Horizontal"
+            <StackLayout Orientation="Horizontal"
                              HorizontalOptions="Center"
                              VerticalOptions="End"
                              Margin="0, 20, 0, 0">
-                    <Frame x:Name="frame_tap_cross"
+                <Frame x:Name="frame_tap_cross"
                            HorizontalOptions="CenterAndExpand"
                            BackgroundColor="#FFF95F62"
                            Padding="10"
                            Margin="0, 0, 10, 0"
                            CornerRadius="30">
-                        <Image x:Name="img_cross"
+                    <Image x:Name="img_cross"
                                WidthRequest="40"
                                HeightRequest="40"/>
-                    </Frame>
-                    <Frame x:Name="frame_tap_check"
+                </Frame>
+                <Frame x:Name="frame_tap_check"
                            HorizontalOptions="CenterAndExpand"
                            BackgroundColor="#FF77D353"
                            Padding="10"
                            CornerRadius="30"
                            Margin="10, 0, 0, 0">
-                        <Image x:Name="img_check"
+                    <Image x:Name="img_check"
                                WidthRequest="40"
                                HeightRequest="40"/>
-                    </Frame>
-                </StackLayout>
-            </StackLayout>-->
+                </Frame>
+            </StackLayout>
         </StackLayout>
     </ContentView.Content>
 </ContentView>

@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace Friends.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeSectionFindMember : ContentView
+    public partial class MyGroupsSectionList : ContentView
     {
-        public HomeSectionFindMember()
+        public MyGroupsSectionList()
         {
             InitializeComponent();
         }

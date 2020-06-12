@@ -27,6 +27,7 @@
     <None Remove="Resources\heart_white_outline.png" />
     <None Remove="Resources\home_black.png" />
     <None Remove="Resources\person_black.png" />
+    <None Remove="Resources\prefs_black.png" />
     <None Remove="Resources\profile_black.png" />
     <None Remove="Resources\remove_black.png" />
     <None Remove="Resources\search_black.png" />
@@ -49,6 +50,7 @@
     <EmbeddedResource Include="Resources\heart_white_outline.png" />
     <EmbeddedResource Include="Resources\home_black.png" />
     <EmbeddedResource Include="Resources\person_black.png" />
+    <EmbeddedResource Include="Resources\prefs_black.png" />
     <EmbeddedResource Include="Resources\profile_black.png" />
     <EmbeddedResource Include="Resources\remove_black.png" />
     <EmbeddedResource Include="Resources\search_black.png" />
@@ -61,13 +63,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\HomeSectionFindGroup.xaml">
+    <EmbeddedResource Update="Views\GroupPeek.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomeSectionFindMember.xaml">
+    <EmbeddedResource Update="Views\HomeSectionPrefs.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MemberPeek.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MemberView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MyGroupsSection.xaml">
@@ -76,10 +81,13 @@
     <EmbeddedResource Update="Views\HomeSection.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomeSectionHome.xaml">
+    <EmbeddedResource Update="Views\HomeSectionFind.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomeSectionFind.xaml">
+    <EmbeddedResource Update="Views\MyGroupsSectionList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ViewWithBackButton.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -93,9 +101,6 @@
     </Compile>
     <Compile Update="Views\HomeSection.xaml.cs">
       <DependentUpon>HomeSection.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\HomeSectionHome.xaml.cs">
-      <DependentUpon>HomeSectionHome.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\HomeSectionFind.xaml.cs">
       <DependentUpon>HomeSectionFind.xaml</DependentUpon>

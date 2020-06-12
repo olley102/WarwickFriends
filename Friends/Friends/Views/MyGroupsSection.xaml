@@ -6,8 +6,8 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.MyGroupsSection">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="My groups" FontSize="40"/>
+      <StackLayout Padding="20">
+          <Label Text="My groups" FontSize="30"/>
       </StackLayout>
   </ContentView.Content>
 </ContentView>

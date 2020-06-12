@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Friends.Views.MemberView">
+    <ContentView.Content>
+        <StackLayout>
+            <Frame x:Name="BackBtnContent"
+                   BackgroundColor="Transparent"
+                   Padding="0">
+                <!-- Content to be filled by code behind -->
+            </Frame>
+
+            <ScrollView>
+                <StackLayout Padding="20">
+                    <Image x:Name="img_member_pic"
+                   HorizontalOptions="Center"
+                   WidthRequest="120"
+                   HeightRequest="120"/>
+
+                    <Frame>
+                        <StackLayout>
+                            <Label x:Name="label_first_name"
+                           Text="First name"
+                           FontSize="30"/>
+                            <Label x:Name="label_course"
+                           Text="Course"
+                           FontSize="20"/>
+                            <Label Text="More info"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>
