@@ -9,7 +9,8 @@
     <ContentView.Content>
         <Frame x:Name="HomeContent"
                BackgroundColor="Transparent"
-               Padding="0">
+               Padding="0"
+               VerticalOptions="FillAndExpand">
             <!-- Content to be filled by code behind -->
         </Frame>
     </ContentView.Content>

@@ -13,6 +13,8 @@
   <ItemGroup>
     <None Remove="Resources\add_black.png" />
     <None Remove="Resources\back_black.png" />
+    <None Remove="Resources\caret_down_white.png" />
+    <None Remove="Resources\caret_up_white.png" />
     <None Remove="Resources\check_white.png" />
     <None Remove="Resources\coffee_black.png" />
     <None Remove="Resources\coffee_white.png" />
@@ -36,6 +38,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\add_black.png" />
     <EmbeddedResource Include="Resources\back_black.png" />
+    <EmbeddedResource Include="Resources\caret_down_white.png" />
+    <EmbeddedResource Include="Resources\caret_up_white.png" />
     <EmbeddedResource Include="Resources\check_white.png" />
     <EmbeddedResource Include="Resources\coffee_black.png" />
     <EmbeddedResource Include="Resources\coffee_white.png" />

@@ -5,30 +5,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Friends.Views.GroupPeek">
-  <ContentView.Content>
-        <Frame BackgroundColor="White"
-               Margin="5">
-            <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Image x:Name="img_group_pic"
-                           WidthRequest="60"
-                           HeightRequest="60"/>
-                    <StackLayout>
-                        <Label x:Name="label_member_first_name"
-                               Text="First name"
-                               FontSize="16"/>
-                        <Label x:Name="label_member_course"
-                               Text="Course"
-                               FontSize="12"/>
-                    </StackLayout>
-                </StackLayout>
+    <ContentView.Content>
+        <Frame>
+            <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand">
+                <Image x:Name="img_group_pic"
+                                           HorizontalOptions="Start"
+                                           WidthRequest="60"
+                                           HeightRequest="60"/>
+                <Label x:Name="label_group_name"
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="Center"
+                                           FontSize="16"
+                                           Text="Group name"/>
                 <Button x:Name="btn_group_view"
-                        BackgroundColor="#FF00A6FF"
-                        TextColor="White"
-                        Text="VIEW"
-                        CornerRadius="20"
-                        HorizontalOptions="End"
-                        HeightRequest="40"/>
+                                            BackgroundColor="#FF00A6FF"
+                                            TextColor="White"
+                                            Text="VIEW"
+                                            CornerRadius="20"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="End"
+                                            HeightRequest="40"/>
             </StackLayout>
         </Frame>
     </ContentView.Content>

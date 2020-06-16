@@ -10,7 +10,8 @@
     <StackLayout>
         
         <Frame x:Name="MainContent"
-               VerticalOptions="StartAndExpand"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand"
                BackgroundColor="Transparent"
                Padding="0">
             <!-- Content to filled by code behind -->

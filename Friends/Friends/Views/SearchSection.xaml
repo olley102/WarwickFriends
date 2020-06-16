@@ -6,8 +6,135 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.SearchSection">
     <ContentView.Content>
-        <StackLayout>
-            <SearchBar Margin="0, 10, 0, 0" Placeholder="Search for a group"/>
-        </StackLayout>
+        <ScrollView>
+            <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <SearchBar Margin="0, 10, 0, 0" Placeholder="Search for a group"/>
+
+                    <StackLayout Orientation="Horizontal"
+                         Padding="10">
+                        <Frame x:Name="frame_tap_filter_society"
+                            BackgroundColor="#FFFF9052"
+                           HasShadow="False"
+                           CornerRadius="40"
+                           Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Society/sport" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                                <Image x:Name="img_caret_society"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="Center"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="30"
+                                     HeightRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame x:Name="frame_tap_filter_course"
+                            BackgroundColor="#FFFF9052"
+                           HasShadow="False"
+                           CornerRadius="40"
+                           Padding="10">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Course" TextColor="White" VerticalOptions="Center" FontSize="16"/>
+                                <Image x:Name="img_caret_course"
+                                     HorizontalOptions="End"
+                                     VerticalOptions="Center"
+                                     BackgroundColor="Transparent"
+                                     WidthRequest="30"
+                                     HeightRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+                    <ScrollView>
+                        <StackLayout x:Name="stack_results" Padding="10">
+                            <Frame>
+                                <StackLayout Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand">
+                                    <Image x:Name="img_results_pic"
+                                           HorizontalOptions="Start"
+                                           WidthRequest="60"
+                                           HeightRequest="60"/>
+                                    <Label x:Name="label_results_name"
+                                           HorizontalOptions="StartAndExpand"
+                                           VerticalOptions="Center"
+                                           FontSize="16"
+                                           Text="Group name"/>
+                                    <Button x:Name="btn_results_view"
+                                            BackgroundColor="#FF00A6FF"
+                                            TextColor="White"
+                                            Text="VIEW"
+                                            CornerRadius="20"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="End"
+                                            HeightRequest="40"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </ScrollView>
+                    
+                </StackLayout>
+
+                <!-- Popup area -->
+                <ContentView x:Name="popup_filter" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 120, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional">
+                    <StackLayout x:Name="stack_filter" VerticalOptions="Start" HorizontalOptions="Center">
+                        <Frame HeightRequest="300" WidthRequest="250" Padding="20">
+                            <StackLayout HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_filter_header" FontSize="20"/>
+                                <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                            <Image x:Name="img_item_pic"
+                                                   HorizontalOptions="Start"
+                                               WidthRequest="60"
+                                               HeightRequest="60"/>
+                                            <Label x:Name="label_item_name"
+                                                   HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="Center"
+                                               FontSize="16"
+                                               Text="Society name"/>
+                                            <CheckBox x:Name="check_filter"
+                                                  HorizontalOptions="End"
+                                                  IsChecked="False"/>
+                                        </StackLayout>
+
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                            <Image x:Name="img_item_pic2"
+                                                   HorizontalOptions="Start"
+                                               WidthRequest="60"
+                                               HeightRequest="60"/>
+                                            <Label x:Name="label_item_name2"
+                                                   HorizontalOptions="StartAndExpand"
+                                               VerticalOptions="Center"
+                                               FontSize="16"
+                                               Text="Society name"/>
+                                            <CheckBox x:Name="check_filter2"
+                                                  HorizontalOptions="End"
+                                                  IsChecked="False"/>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ScrollView>
+
+                                <StackLayout Orientation="Horizontal" VerticalOptions="End">
+                                    <Button x:Name="btn_filter_cancel"
+                                            BackgroundColor="#FF8492A6"
+                                            TextColor="White"
+                                            Text="CANCEL"
+                                            CornerRadius="20"
+                                            HorizontalOptions="EndAndExpand"
+                                            HeightRequest="40"/>
+                                    <Button x:Name="btn_filter_ok"
+                                            BackgroundColor="#FF00A6FF"
+                                            TextColor="White"
+                                            Text="OK"
+                                            CornerRadius="20"
+                                            HorizontalOptions="End"
+                                            HeightRequest="40"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ContentView>
+            </AbsoluteLayout>
+        </ScrollView>
     </ContentView.Content>
 </ContentView>

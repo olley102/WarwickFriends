@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.HomeSectionFind">
     <ContentView.Content>
-        <StackLayout Padding="20">
+        <StackLayout Padding="20" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                 <Label x:Name="label_find_header"
                        HorizontalOptions="StartAndExpand"
@@ -20,7 +20,7 @@
                              HorizontalOptions="End"/>
             </StackLayout>
 
-            <ScrollView>
+            <ScrollView VerticalOptions="FillAndExpand" Padding="5">
                 <StackLayout x:Name="stack_member_list">
                     <!-- to be filled -->
                 </StackLayout>

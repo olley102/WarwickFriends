@@ -33,6 +33,7 @@ namespace Friends.Views
         }
         public void SetHomeHome()
         {
+            home_find = new HomeSectionFind(num_members, MemberViewAction, PrefsClickAction);
             SetHomeContent(home_find);
         }
         private void MemberBackBtnAction()
