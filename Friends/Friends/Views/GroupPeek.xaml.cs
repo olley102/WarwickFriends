@@ -18,11 +18,11 @@ namespace Friends.Views
 
             img_group_pic.Source = ImageSource.FromResource("Friends.Resources.group_black.png");
         }
-        public void SetGroupInfo(String group_name, String group_type)
-        {
-            label_member_first_name.Text = group_name;
-            label_member_course.Text = group_type;
-        }
+        //public void SetGroupInfo(String group_name, String group_type)
+        //{
+        //    label_member_first_name.Text = group_name;
+        //    label_member_course.Text = group_type;
+        //}
         public void SetViewButtonAction(Action view_btn_action)
         {
             btn_group_view.Clicked += (s, e) => view_btn_action();

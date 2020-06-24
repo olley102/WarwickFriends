@@ -5,9 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Friends.Views.MyProfileSection">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="My profile" FontSize="40"/>
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <StackLayout Padding="20">
+            <Label Text="My profile" FontSize="30"/>
+            <Label x:Name="label_first_name" Text="Name here"/>
+            <Label x:Name="label_course" Text="Course here"/>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

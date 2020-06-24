@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Friends.Models;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace Friends.Views
 {
@@ -15,17 +17,15 @@ namespace Friends.Views
         HomeSectionFind home_find;
         HomeSectionPrefs prefs_view;
         int num_members;
-        const int max_members = 7;
-        const int min_members = 1;
         public HomeSection()
         {
             InitializeComponent();
 
-            num_members = 4;
+            num_members = Preferences.Get("num_members", 4);
             home_find = new HomeSectionFind(num_members, MemberViewAction, PrefsClickAction);
             SetHomeContent(home_find);
 
-            prefs_view = new HomeSectionPrefs(num_members, PrefsBackBtnAction, MinusTapAction, AddTapAction, max_members, min_members);
+            prefs_view = new HomeSectionPrefs(num_members, PrefsBackBtnAction, MinusTapAction, AddTapAction);
         }
         private void SetHomeContent(ContentView content)
         {
@@ -33,8 +33,13 @@ namespace Friends.Views
         }
         public void SetHomeHome()
         {
-            home_find = new HomeSectionFind(num_members, MemberViewAction, PrefsClickAction);
-            SetHomeContent(home_find);
+            if (HomeContent.Content.GetType() != typeof(HomeSectionFind))
+            {
+                if (HomeContent.Content.GetType() == typeof(HomeSectionPrefs))
+                    Preferences.Set("num_members", num_members);
+                home_find = new HomeSectionFind(num_members, MemberViewAction, PrefsClickAction);
+                SetHomeContent(home_find);
+            }
         }
         private void MemberBackBtnAction()
         {
@@ -42,6 +47,7 @@ namespace Friends.Views
         }
         private void PrefsBackBtnAction()
         {
+            Preferences.Set("num_members", num_members);
             home_find = new HomeSectionFind(num_members, MemberViewAction, PrefsClickAction);
             SetHomeContent(home_find);
         }
@@ -52,13 +58,13 @@ namespace Friends.Views
         }
         private int MinusTapAction()
         {
-            if (num_members > min_members)
+            if (num_members > Constants.MinMembers)
                 num_members--;
             return num_members;
         }
         private int AddTapAction()
         {
-            if (num_members < max_members)
+            if (num_members < Constants.MaxMembers)
                 num_members++;
             return num_members;
         }

@@ -10,7 +10,7 @@ namespace Friends
         {
             InitializeComponent();
 
-            MainPage = new Views.MainPage();
+            MainPage = new Views.LoginPage();
         }
 
         protected override void OnStart()

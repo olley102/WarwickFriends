@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Friends.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Friends.Views
@@ -18,9 +22,12 @@ namespace Friends.Views
         MyGroupsSection my_groups_section;
         MyProfileSection my_profile_section;
         int current_view;
-        public MainPage()
+        private string Uuid;
+        public MainPage(string uuid)
         {
             InitializeComponent();
+
+            Uuid = uuid;
 
             ibtn_home.Source = ImageSource.FromResource("Friends.Resources.home_black.png");
             ibtn_search.Source = ImageSource.FromResource("Friends.Resources.search_black.png");
@@ -34,6 +41,13 @@ namespace Friends.Views
 
             SetMainContent(home_section);
             current_view = 0;
+
+            using (WebClient wc = new WebClient())
+            {
+                var json = wc.DownloadString($"{Constants.BaseURL}/oauth/userInfo?uuid={Uuid}");
+                WarwickAccount acc_obj = JsonConvert.DeserializeObject<WarwickAccount>(json);
+                my_profile_section.SetProfileInfo(acc_obj.data["name"], acc_obj.data["deptshort"]);
+            }
         }
         private void ibtn_home_Clicked(object sender, EventArgs e)
         {

@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.MemberPeek">
     <ContentView.Content>
-        <Frame BackgroundColor="White">
+        <Frame BackgroundColor="White" Margin="5">
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
                     <Image x:Name="img_member_avatar"

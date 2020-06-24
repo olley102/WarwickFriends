@@ -20,7 +20,7 @@
                              HorizontalOptions="End"/>
             </StackLayout>
 
-            <ScrollView VerticalOptions="FillAndExpand" Padding="5">
+            <ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout x:Name="stack_member_list">
                     <!-- to be filled -->
                 </StackLayout>
