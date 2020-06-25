@@ -6,6 +6,39 @@
              mc:Ignorable="d"
              x:Class="Friends.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <!-- Colors -->
 
+            <!-- Label -->
+            <Style x:Key="labelHeader" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+            
+            <!-- ImageButton -->
+            <Style x:Key="ibtnHeader" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Opacity" Value="0.5"/>
+                <Setter Property="WidthRequest" Value="35"/>
+                <Setter Property="HeightRequest" Value="35"/>
+            </Style>
+            <Style x:Key="ibtnTab" TargetType="ImageButton">
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="WidthRequest" Value="60"/>
+                <Setter Property="HeightRequest" Value="60"/>
+                <Setter Property="Padding" Value="15"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
+            
+            <!-- Frame -->
+            <Style x:Key="frameViewContainer" TargetType="Frame">
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

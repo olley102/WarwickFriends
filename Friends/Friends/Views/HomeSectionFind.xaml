@@ -6,51 +6,54 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.HomeSectionFind">
     <ContentView.Content>
-        <StackLayout Padding="20" VerticalOptions="FillAndExpand">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Label x:Name="label_find_header"
-                       HorizontalOptions="StartAndExpand"
-                   Text="Find a friendship group"
-                   FontSize="20" />
-                <ImageButton x:Name="ibtn_prefs"
-                             BackgroundColor="Transparent"
-                             Opacity="0.5"
-                             WidthRequest="35"
-                             HeightRequest="35"
-                             HorizontalOptions="End"/>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                             Padding="20, 20, 20, 0">
+                    <Label x:Name="label_find_header"
+                           Style="{StaticResource labelHeader}"
+                           Text="Find a friendship group"/>
+                    <ImageButton x:Name="ibtn_prefs"
+                                 Style="{StaticResource ibtnHeader}"
+                                 HorizontalOptions="End"/>
+                </StackLayout>
+
+                <ScrollView VerticalOptions="FillAndExpand">
+                    <StackLayout x:Name="stack_member_list" Padding="20">
+                        <!-- to be filled -->
+                    </StackLayout>
+                </ScrollView>
             </StackLayout>
 
-            <ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout x:Name="stack_member_list">
-                    <!-- to be filled -->
-                </StackLayout>
-            </ScrollView>
-
-            <StackLayout Orientation="Horizontal"
-                             HorizontalOptions="Center"
-                             VerticalOptions="End"
-                             Margin="0, 20, 0, 0">
+            <StackLayout AbsoluteLayout.LayoutBounds="0, 1, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         Padding="0, 0, 0, 40"
+                         Orientation="Horizontal"
+                         HorizontalOptions="Center"
+                         VerticalOptions="End">
                 <Frame x:Name="frame_tap_cross"
-                           HorizontalOptions="CenterAndExpand"
-                           BackgroundColor="#FFF95F62"
-                           Padding="10"
-                           Margin="0, 0, 10, 0"
-                           CornerRadius="30">
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="#FFF95F62"
+                       Padding="10"
+                       Margin="0, 0, 10, 0"
+                       CornerRadius="30">
                     <Image x:Name="img_cross"
-                               WidthRequest="40"
-                               HeightRequest="40"/>
+                           WidthRequest="40"
+                           HeightRequest="40"/>
                 </Frame>
                 <Frame x:Name="frame_tap_check"
-                           HorizontalOptions="CenterAndExpand"
-                           BackgroundColor="#FF77D353"
-                           Padding="10"
-                           CornerRadius="30"
-                           Margin="10, 0, 0, 0">
+                       HorizontalOptions="CenterAndExpand"
+                       BackgroundColor="#FF77D353"
+                       Padding="10"
+                       CornerRadius="30"
+                       Margin="10, 0, 0, 0">
                     <Image x:Name="img_check"
-                               WidthRequest="40"
-                               HeightRequest="40"/>
+                           WidthRequest="40"
+                           HeightRequest="40"/>
                 </Frame>
             </StackLayout>
-        </StackLayout>
+        </AbsoluteLayout>
     </ContentView.Content>
 </ContentView>

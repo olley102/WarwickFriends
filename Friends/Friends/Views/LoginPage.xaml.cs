@@ -39,10 +39,10 @@ namespace Friends.Views
                     using (WebClient wc = new WebClient())
                     {
                         var json = wc.DownloadString($"{Constants.BaseURL}/oauth/userInfo?uuid={uuid}");
+                        WarwickAccount acc_obj = JsonConvert.DeserializeObject<WarwickAccount>(json);
+                        MainPage mainPage = new MainPage(uuid, acc_obj);
+                        Application.Current.MainPage = mainPage;
                     }
-
-                    MainPage mainPage = new MainPage(uuid);
-                    Application.Current.MainPage = mainPage;
                 }
                 catch (WebException)
                 {
@@ -62,7 +62,11 @@ namespace Friends.Views
                     var json = wc.DownloadString(e.Url);
                     WarwickLogin login_obj = JsonConvert.DeserializeObject<WarwickLogin>(json);
                     await SecureStorage.SetAsync("uuid", login_obj.uuid);
-                    MainPage mainPage = new MainPage(login_obj.uuid);
+
+                    json = wc.DownloadString($"{Constants.BaseURL}/oauth/userInfo?uuid={login_obj.uuid}");
+                    WarwickAccount acc_obj = JsonConvert.DeserializeObject<WarwickAccount>(json);
+
+                    MainPage mainPage = new MainPage(login_obj.uuid, acc_obj);
                     Application.Current.MainPage = mainPage;
                 }
             }

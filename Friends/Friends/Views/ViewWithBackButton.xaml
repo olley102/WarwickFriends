@@ -11,10 +11,7 @@
                    VerticalOptions="Start"
                    Padding="10">
                 <ImageButton x:Name="ibtn_back"
-                             BackgroundColor="Transparent"
-                             Opacity="0.5"
-                             WidthRequest="35"
-                             HeightRequest="35"
+                             Style="{StaticResource ibtnHeader}"
                              HorizontalOptions="Start"
                              VerticalOptions="Start"/>
          </Frame>

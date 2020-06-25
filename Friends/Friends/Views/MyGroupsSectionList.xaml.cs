@@ -15,6 +15,9 @@ namespace Friends.Views
         public MyGroupsSectionList()
         {
             InitializeComponent();
+
+            GroupPeek temp_group_peek = new GroupPeek();
+            stack_group_list.Children.Add(temp_group_peek);
         }
     }
 }

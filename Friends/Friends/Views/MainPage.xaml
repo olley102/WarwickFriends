@@ -8,12 +8,9 @@
              x:Class="Friends.Views.MainPage">
 
     <StackLayout>
-        
+
         <Frame x:Name="MainContent"
-               HorizontalOptions="FillAndExpand"
-               VerticalOptions="FillAndExpand"
-               BackgroundColor="Transparent"
-               Padding="0">
+               Style="{StaticResource frameViewContainer}">
             <!-- Content to filled by code behind -->
         </Frame>
 
@@ -22,46 +19,25 @@
                HeightRequest="60"
                VerticalOptions="End"
                HorizontalOptions="FillAndExpand"
-               Padding="0">
+               Padding="0"
+               Margin="0, -10, 0, 0">
             <StackLayout Orientation="Horizontal">
-                
                 <ImageButton x:Name="ibtn_home"
-                             BackgroundColor="Transparent"
+                             Style="{StaticResource ibtnTab}"
                              Opacity="1"
-                             WidthRequest="60"
-                             HeightRequest="60"
-                             Padding="15"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="Center"
                              Clicked="ibtn_home_Clicked"/>
                 <ImageButton x:Name="ibtn_search"
-                             BackgroundColor="Transparent"
+                             Style="{StaticResource ibtnTab}"
                              Opacity="0.5"
-                             WidthRequest="60"
-                             HeightRequest="60"
-                             Padding="15"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="Center"
                              Clicked="ibtn_search_Clicked"/>
                 <ImageButton x:Name="ibtn_mygroups"
-                             BackgroundColor="Transparent"
-                             Opacity="0.5"
-                             WidthRequest="60"
-                             HeightRequest="60"
-                             Padding="15"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="Center"
+                             Style="{StaticResource ibtnTab}"
+                             Opacity="0.5"                             
                              Clicked="ibtn_mygroups_Clicked"/>
                 <ImageButton x:Name="ibtn_myprofile"
-                             BackgroundColor="Transparent"
+                             Style="{StaticResource ibtnTab}"
                              Opacity="0.5"
-                             WidthRequest="60"
-                             HeightRequest="60"
-                             Padding="15"
-                             HorizontalOptions="CenterAndExpand"
-                             VerticalOptions="Center"
                              Clicked="ibtn_myprofile_Clicked"/>
-                
             </StackLayout>
         </Frame>
 

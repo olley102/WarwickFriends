@@ -5,9 +5,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Friends.Views.MyGroupsSectionList">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <StackLayout VerticalOptions="FillAndExpand">
+            <StackLayout Padding="20, 20, 20, 0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label x:Name="label_mygroups_header"
+                       Style="{StaticResource labelHeader}"
+                       Text="My groups"/>
+                <ImageButton x:Name="ibtn_new_group"
+                             Style="{StaticResource ibtnHeader}"
+                             HorizontalOptions="End"/>
+            </StackLayout>
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="stack_group_list" Padding="20">
+                    <!-- to be filled -->
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

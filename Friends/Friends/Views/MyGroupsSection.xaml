@@ -5,9 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Friends.Views.MyGroupsSection">
-  <ContentView.Content>
-      <StackLayout Padding="20">
-          <Label Text="My groups" FontSize="30"/>
-      </StackLayout>
-  </ContentView.Content>
+    <ContentView.Content>
+        <Frame x:Name="MyGroupsContent"
+               Style="{StaticResource frameViewContainer}">
+            <!-- Content to be filled by code behind -->
+        </Frame>
+    </ContentView.Content>
 </ContentView>

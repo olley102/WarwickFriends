@@ -8,9 +8,7 @@
              x:Class="Friends.Views.HomeSection">
     <ContentView.Content>
         <Frame x:Name="HomeContent"
-               BackgroundColor="Transparent"
-               Padding="0"
-               VerticalOptions="FillAndExpand">
+               Style="{StaticResource frameViewContainer}">
             <!-- Content to be filled by code behind -->
         </Frame>
     </ContentView.Content>

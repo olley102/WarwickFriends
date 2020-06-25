@@ -17,22 +17,22 @@
             <ScrollView>
                 <StackLayout Padding="20">
                     <Label x:Name="label_prefs_header"
-                   Text="Preferences"
-                   FontSize="20" />
+                           Text="Preferences"
+                           Style="{StaticResource labelHeader}" />
                     <Frame Margin="0, 20, 0, 0"
-                       Padding="0">
+                           Padding="0">
                         <StackLayout Orientation="Horizontal">
                             <Label Text="Number of members"
-                               HorizontalOptions="StartAndExpand"
-                               Margin="20, 20, 0, 20"/>
+                                   HorizontalOptions="StartAndExpand"
+                                   Margin="20, 20, 0, 20"/>
                             <Frame x:Name="frame_tap_minus"
-                               BackgroundColor="Transparent"
-                               Padding="20"
-                               HorizontalOptions="End"
-                               CornerRadius="20">
+                                   BackgroundColor="Transparent"
+                                   Padding="20"
+                                   HorizontalOptions="End"
+                                   CornerRadius="20">
                                 <Image x:Name="img_minus"
-                                   WidthRequest="20"
-                                   HeightRequest="20"/>
+                                       WidthRequest="20"
+                                       HeightRequest="20"/>
                             </Frame>
                             <Label x:Name="label_num_members"
                                Text="4"
