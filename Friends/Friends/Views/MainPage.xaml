@@ -15,7 +15,7 @@
         </Frame>
 
         <Frame x:Name="TabContent"
-               BackgroundColor="#FFEFF2F7"
+               BackgroundColor="{StaticResource BarBackground}"
                HeightRequest="60"
                VerticalOptions="End"
                HorizontalOptions="FillAndExpand"

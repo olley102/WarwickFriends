@@ -14,7 +14,7 @@
                     <StackLayout Orientation="Horizontal"
                          Padding="10">
                         <Frame x:Name="frame_tap_filter_society"
-                            BackgroundColor="#FFFF9052"
+                            BackgroundColor="{StaticResource PrimaryLight}"
                            HasShadow="False"
                            CornerRadius="40"
                            Padding="10">
@@ -29,7 +29,7 @@
                             </StackLayout>
                         </Frame>
                         <Frame x:Name="frame_tap_filter_course"
-                            BackgroundColor="#FFFF9052"
+                            BackgroundColor="{StaticResource PrimaryLight}"
                            HasShadow="False"
                            CornerRadius="40"
                            Padding="10">
@@ -47,28 +47,7 @@
 
                     <ScrollView>
                         <StackLayout x:Name="stack_results" Padding="10">
-                            <Frame>
-                                <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="FillAndExpand">
-                                    <Image x:Name="img_results_pic"
-                                           HorizontalOptions="Start"
-                                           WidthRequest="60"
-                                           HeightRequest="60"/>
-                                    <Label x:Name="label_results_name"
-                                           HorizontalOptions="StartAndExpand"
-                                           VerticalOptions="Center"
-                                           FontSize="16"
-                                           Text="Group name"/>
-                                    <Button x:Name="btn_results_view"
-                                            BackgroundColor="#FF00A6FF"
-                                            TextColor="White"
-                                            Text="VIEW"
-                                            CornerRadius="20"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="End"
-                                            HeightRequest="40"/>
-                                </StackLayout>
-                            </Frame>
+                            <!-- to be filled -->
                         </StackLayout>
                     </ScrollView>
                     
@@ -116,14 +95,14 @@
 
                                 <StackLayout Orientation="Horizontal" VerticalOptions="End">
                                     <Button x:Name="btn_filter_cancel"
-                                            BackgroundColor="#FF8492A6"
+                                            BackgroundColor="{StaticResource Cancel}"
                                             TextColor="White"
                                             Text="CANCEL"
                                             CornerRadius="20"
                                             HorizontalOptions="EndAndExpand"
                                             HeightRequest="40"/>
                                     <Button x:Name="btn_filter_ok"
-                                            BackgroundColor="#FF00A6FF"
+                                            BackgroundColor="{StaticResource Primary}"
                                             TextColor="White"
                                             Text="OK"
                                             CornerRadius="20"

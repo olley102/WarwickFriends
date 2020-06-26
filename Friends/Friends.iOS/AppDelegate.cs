@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin.Essentials;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 namespace Friends.iOS
 {
@@ -25,7 +29,20 @@ namespace Friends.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
+            SetColoredStatusBar("#7c4dff");
+
             return base.FinishedLaunching(app, options);
+        }
+        public void SetColoredStatusBar(string hexColor)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                UIView statusBar = UIApplication.SharedApplication.ValueForKey(new NSString("statusBar")) as UIView;
+                if (statusBar != null && statusBar.RespondsToSelector(new ObjCRuntime.Selector("setBackgroundColor:")))
+                {
+                    statusBar.BackgroundColor = Xamarin.Forms.Color.FromHex(hexColor).ToUIColor();
+                }
+            });
         }
     }
 }

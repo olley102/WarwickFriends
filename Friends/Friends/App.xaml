@@ -8,19 +8,26 @@
     <Application.Resources>
         <ResourceDictionary>
             <!-- Colors -->
+            <!-- Please update Android styles.xml and iOS AppDelegate.cs -->
+            <Color x:Key="Primary">#3f1dcb</Color>
+            <Color x:Key="PrimaryLight">#7c4dff</Color>
+            <Color x:Key="BarBackground">#ffffff</Color>
+            <Color x:Key="Cancel">Gray</Color>
 
             <!-- Label -->
             <Style x:Key="labelHeader" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
                 <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryLight}"/>
             </Style>
             
             <!-- ImageButton -->
             <Style x:Key="ibtnHeader" TargetType="ImageButton">
                 <Setter Property="BackgroundColor" Value="Transparent"/>
                 <Setter Property="Opacity" Value="0.5"/>
-                <Setter Property="WidthRequest" Value="35"/>
-                <Setter Property="HeightRequest" Value="35"/>
+                <Setter Property="WidthRequest" Value="40"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="Padding" Value="5"/>
             </Style>
             <Style x:Key="ibtnTab" TargetType="ImageButton">
                 <Setter Property="BackgroundColor" Value="Transparent"/>

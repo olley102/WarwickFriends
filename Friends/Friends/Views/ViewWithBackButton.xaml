@@ -6,14 +6,19 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.ViewWithBackButton">
     <ContentView.Content>
-        <Frame BackgroundColor="#FFEFF2F7"
-                   HasShadow="False"
-                   VerticalOptions="Start"
-                   Padding="10">
+        <Frame BackgroundColor="{StaticResource BarBackground}"
+               HasShadow="False"
+               VerticalOptions="Start"
+               Padding="10">
+            <StackLayout Orientation="Horizontal">
                 <ImageButton x:Name="ibtn_back"
                              Style="{StaticResource ibtnHeader}"
                              HorizontalOptions="Start"
-                             VerticalOptions="Start"/>
-         </Frame>
+                             VerticalOptions="Center"/>
+                <Label x:Name="label_title"
+                       VerticalOptions="Center"
+                       Style="{StaticResource labelHeader}"/>
+            </StackLayout>
+        </Frame>
     </ContentView.Content>
 </ContentView>

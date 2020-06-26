@@ -24,8 +24,6 @@ namespace Friends.Views
             img_item_pic.Source = ImageSource.FromResource("Friends.Resources.group_black.png");
             img_item_pic2.Source = ImageSource.FromResource("Friends.Resources.group_black.png");
 
-            img_results_pic.Source = ImageSource.FromResource("Friends.Resources.group_black.png");
-
             society_filter_popped = false;
             course_filter_popped = false;
 

@@ -6,26 +6,25 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.GroupPeek">
     <ContentView.Content>
-        <Frame>
-            <StackLayout Orientation="Horizontal"
-                                             HorizontalOptions="FillAndExpand">
-                <Image x:Name="img_group_pic"
-                                           HorizontalOptions="Start"
-                                           WidthRequest="60"
-                                           HeightRequest="60"/>
-                <Label x:Name="label_group_name"
-                                           HorizontalOptions="StartAndExpand"
-                                           VerticalOptions="Center"
-                                           FontSize="16"
-                                           Text="Group name"/>
+        <Frame BackgroundColor="White">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Image x:Name="img_group_pic"
+                           WidthRequest="60"
+                           HeightRequest="60"/>
+                    <StackLayout>
+                        <Label x:Name="label_group_name"
+                               Text="Group name"
+                               FontSize="16"/>
+                    </StackLayout>
+                </StackLayout>
                 <Button x:Name="btn_group_view"
-                                            BackgroundColor="#FF00A6FF"
-                                            TextColor="White"
-                                            Text="VIEW"
-                                            CornerRadius="20"
-                                            VerticalOptions="Center"
-                                            HorizontalOptions="End"
-                                            HeightRequest="40"/>
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White"
+                        Text="VIEW"
+                        CornerRadius="20"
+                        HorizontalOptions="End"
+                        HeightRequest="40"/>
             </StackLayout>
         </Frame>
     </ContentView.Content>

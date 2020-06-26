@@ -22,7 +22,7 @@
                     </StackLayout>
                 </StackLayout>
                 <Button x:Name="btn_member_view"
-                        BackgroundColor="#FF00A6FF"
+                        BackgroundColor="{StaticResource Primary}"
                         TextColor="White"
                         Text="VIEW"
                         CornerRadius="20"

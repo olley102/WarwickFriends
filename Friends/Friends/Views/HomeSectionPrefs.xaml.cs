@@ -22,7 +22,7 @@ namespace Friends.Views
             img_minus.Source = ImageSource.FromResource("Friends.Resources.remove_black.png");
             img_add.Source = ImageSource.FromResource("Friends.Resources.add_black.png");
 
-            ViewWithBackButton viewWithBackButton = new ViewWithBackButton(back_btn_action);
+            ViewWithBackButton viewWithBackButton = new ViewWithBackButton(back_btn_action, "Preferences");
             BackBtnContent.Content = viewWithBackButton;
 
             TapGestureRecognizer minusTapRecognizer = new TapGestureRecognizer();

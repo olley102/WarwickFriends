@@ -16,9 +16,6 @@
 
             <ScrollView>
                 <StackLayout Padding="20">
-                    <Label x:Name="label_prefs_header"
-                           Text="Preferences"
-                           Style="{StaticResource labelHeader}" />
                     <Frame Margin="0, 20, 0, 0"
                            Padding="0">
                         <StackLayout Orientation="Horizontal">
