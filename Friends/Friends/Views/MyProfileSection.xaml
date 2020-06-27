@@ -6,10 +6,129 @@
              mc:Ignorable="d"
              x:Class="Friends.Views.MyProfileSection">
     <ContentView.Content>
-        <StackLayout Padding="20">
-            <Label Text="My profile" FontSize="30"/>
-            <Label x:Name="label_first_name" Text="Name here"/>
-            <Label x:Name="label_course" Text="Course here"/>
-        </StackLayout>
+        <AbsoluteLayout Padding="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ScrollView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout Padding="20">
+                    <ImageButton x:Name="ibtn_profile_pic"
+                                 HorizontalOptions="Center"
+                                 WidthRequest="120"
+                                 HeightRequest="120"/>
+                    <Label x:Name="label_profile_name"
+                           Text="Full name"
+                           HorizontalOptions="Center"
+                           FontSize="30"/>
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_bio_header"
+                                       Text="Biography"
+                                       Style="{StaticResource labelHeader}"/>
+                                <Image x:Name="img_bio_icon"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                            </StackLayout>
+                            <Editor x:Name="edit_bio"
+                                    Placeholder="Biography"
+                                    HorizontalOptions="FillAndExpand"
+                                    AutoSize="TextChanges"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_social_header"
+                                       Text="Social links"
+                                       Style="{StaticResource labelHeader}"/>
+                                <Image x:Name="img_social_icon"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                            </StackLayout>
+                            <StackLayout x:Name="stack_social_list">
+                                <!-- to be filled -->
+                            </StackLayout>
+                            <ImageButton x:Name="ibtn_add_social_item"
+                                         Style="{StaticResource ibtnHeader}"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_study_header"
+                                       Text="Study"
+                                       Style="{StaticResource labelHeader}"/>
+                                <Image x:Name="img_study_icon"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       WidthRequest="30"
+                                       HeightRequest="30"/>
+                            </StackLayout>
+                            <Label x:Name="label_course"
+                                   Text="Course"
+                                   FontSize="16"/>
+                            <Label x:Name="label_year"
+                                   Text="Year N"
+                                   FontSize="16"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            
+            <!-- Popup area -->
+            <AbsoluteLayout x:Name="popup_background" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional"
+                                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <ContentView x:Name="popup_social_select" AbsoluteLayout.LayoutBounds="0, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
+                    <Frame HorizontalOptions="FillAndExpand" VerticalOptions="End" Padding="20">
+                        <StackLayout HorizontalOptions="FillAndExpand">
+                            <Label Text="Select type" Style="{StaticResource labelHeader}"/>
+                            <ScrollView Orientation="Horizontal">
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Frame x:Name="frame_tap_facebook"
+                                           BackgroundColor="White"
+                                           CornerRadius="40"
+                                           BorderColor="Black"
+                                           HasShadow="False"
+                                           Padding="10">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Facebook" TextColor="Black" VerticalOptions="Center" FontSize="16"/>
+                                            <Image x:Name="img_facebook_icon"
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="Center"
+                                                   BackgroundColor="Transparent"
+                                                   WidthRequest="30"
+                                                   HeightRequest="20"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame x:Name="frame_tap_twitter"
+                                           BackgroundColor="White"
+                                           CornerRadius="40"
+                                           BorderColor="Black"
+                                           HasShadow="False"
+                                           Padding="10">
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="Twitter" TextColor="Black" VerticalOptions="Center" FontSize="16"/>
+                                            <Image x:Name="img_twitter_icon"
+                                                   HorizontalOptions="End"
+                                                   VerticalOptions="Center"
+                                                   BackgroundColor="Transparent"
+                                                   WidthRequest="30"
+                                                   HeightRequest="20"/>
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                            </ScrollView>
+                        </StackLayout>
+                    </Frame>
+                </ContentView>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
     </ContentView.Content>
 </ContentView>

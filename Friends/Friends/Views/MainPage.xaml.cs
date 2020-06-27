@@ -41,7 +41,7 @@ namespace Friends.Views
             SetMainContent(home_section);
             current_view = 0;
 
-            my_profile_section.SetProfileInfo(account.data["name"], account.data["deptshort"]);
+            my_profile_section.SetProfileInfo(account.data["name"], account.data["deptshort"], account.data["warwickyearofstudy"]);
         }
         private void ibtn_home_Clicked(object sender, EventArgs e)
         {

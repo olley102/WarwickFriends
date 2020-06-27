@@ -13,13 +13,17 @@
   <ItemGroup>
     <None Remove="Resources\add_black.png" />
     <None Remove="Resources\back_black.png" />
+    <None Remove="Resources\caret_down_black.png" />
     <None Remove="Resources\caret_down_white.png" />
+    <None Remove="Resources\caret_up_black.png" />
     <None Remove="Resources\caret_up_white.png" />
     <None Remove="Resources\check_white.png" />
     <None Remove="Resources\coffee_black.png" />
     <None Remove="Resources\coffee_white.png" />
     <None Remove="Resources\coffee_white_outline.png" />
+    <None Remove="Resources\cross_black.png" />
     <None Remove="Resources\cross_white.png" />
+    <None Remove="Resources\f_logo.png" />
     <None Remove="Resources\grad_black.png" />
     <None Remove="Resources\grad_white.png" />
     <None Remove="Resources\grad_white_outline.png" />
@@ -28,23 +32,30 @@
     <None Remove="Resources\heart_white.png" />
     <None Remove="Resources\heart_white_outline.png" />
     <None Remove="Resources\home_black.png" />
+    <None Remove="Resources\link_black.png" />
+    <None Remove="Resources\note_black.png" />
     <None Remove="Resources\person_black.png" />
     <None Remove="Resources\prefs_black.png" />
     <None Remove="Resources\profile_black.png" />
     <None Remove="Resources\remove_black.png" />
     <None Remove="Resources\search_black.png" />
+    <None Remove="Resources\t_logo.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Resources\add_black.png" />
     <EmbeddedResource Include="Resources\back_black.png" />
+    <EmbeddedResource Include="Resources\caret_down_black.png" />
     <EmbeddedResource Include="Resources\caret_down_white.png" />
+    <EmbeddedResource Include="Resources\caret_up_black.png" />
     <EmbeddedResource Include="Resources\caret_up_white.png" />
     <EmbeddedResource Include="Resources\check_white.png" />
     <EmbeddedResource Include="Resources\coffee_black.png" />
     <EmbeddedResource Include="Resources\coffee_white.png" />
     <EmbeddedResource Include="Resources\coffee_white_outline.png" />
+    <EmbeddedResource Include="Resources\cross_black.png" />
     <EmbeddedResource Include="Resources\cross_white.png" />
+    <EmbeddedResource Include="Resources\f_logo.png" />
     <EmbeddedResource Include="Resources\grad_black.png" />
     <EmbeddedResource Include="Resources\grad_white.png" />
     <EmbeddedResource Include="Resources\grad_white_outline.png" />
@@ -53,11 +64,14 @@
     <EmbeddedResource Include="Resources\heart_white.png" />
     <EmbeddedResource Include="Resources\heart_white_outline.png" />
     <EmbeddedResource Include="Resources\home_black.png" />
+    <EmbeddedResource Include="Resources\link_black.png" />
+    <EmbeddedResource Include="Resources\note_black.png" />
     <EmbeddedResource Include="Resources\person_black.png" />
     <EmbeddedResource Include="Resources\prefs_black.png" />
     <EmbeddedResource Include="Resources\profile_black.png" />
     <EmbeddedResource Include="Resources\remove_black.png" />
     <EmbeddedResource Include="Resources\search_black.png" />
+    <EmbeddedResource Include="Resources\t_logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -94,6 +108,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MyGroupsSectionList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SocialLinkListItem.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ViewWithBackButton.xaml">

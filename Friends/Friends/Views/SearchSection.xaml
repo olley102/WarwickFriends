@@ -55,10 +55,10 @@
 
                 <!-- Popup area -->
                 <ContentView x:Name="popup_filter" IsVisible="false" AbsoluteLayout.LayoutBounds="0, 120, 1, 1" AbsoluteLayout.LayoutFlags="SizeProportional">
-                    <StackLayout x:Name="stack_filter" VerticalOptions="Start" HorizontalOptions="Center">
-                        <Frame HeightRequest="300" WidthRequest="250" Padding="20">
+                    <StackLayout x:Name="stack_filter" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Frame x:Name="frame_tap_off_filter" HeightRequest="300" WidthRequest="250" Padding="20" HorizontalOptions="Center" VerticalOptions="Start">
                             <StackLayout HorizontalOptions="FillAndExpand">
-                                <Label x:Name="label_filter_header" FontSize="20"/>
+                                <Label x:Name="label_filter_header" Style="{StaticResource labelHeader}"/>
                                 <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
                                     <StackLayout>
                                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">

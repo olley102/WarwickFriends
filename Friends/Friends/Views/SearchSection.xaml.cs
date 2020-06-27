@@ -51,6 +51,20 @@ namespace Friends.Views
                 else
                     TogglePopupCourse();
             };
+
+            TapGestureRecognizer stackTapOffRecognizer = new TapGestureRecognizer();
+            stackTapOffRecognizer.Tapped += (s, e) =>
+            {
+                if (society_filter_popped)
+                    TogglePopupSociety();
+                else
+                    TogglePopupCourse();
+            };
+
+            stack_filter.GestureRecognizers.Add(stackTapOffRecognizer);
+
+            TapGestureRecognizer frameTapOffRecognizer = new TapGestureRecognizer();  // do nothing
+            frame_tap_off_filter.GestureRecognizers.Add(frameTapOffRecognizer);
         }
         private void TogglePopupSociety()
         {

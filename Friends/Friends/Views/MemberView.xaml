@@ -15,20 +15,52 @@
 
             <ScrollView>
                 <StackLayout Padding="20">
-                    <Image x:Name="img_member_pic"
-                   HorizontalOptions="Center"
-                   WidthRequest="120"
-                   HeightRequest="120"/>
-
+                    <Image x:Name="img_profile_pic"
+                             HorizontalOptions="Center"
+                             WidthRequest="120"
+                             HeightRequest="120"/>
+                    <Label x:Name="label_profile_name"
+                       Text="Name"
+                       HorizontalOptions="Center"
+                       FontSize="30"/>
                     <Frame>
-                        <StackLayout>
-                            <Label x:Name="label_first_name"
-                           Text="First name"
-                           FontSize="30"/>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_bio_header"
+                                   Text="Biography"
+                                   Style="{StaticResource labelHeader}"/>
+                                <Image x:Name="img_bio_icon"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            </StackLayout>
+                            <Label x:Name="label_member_bio"
+                                   Text="Biography"
+                                   FontSize="18"
+                                   HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+                                <Label x:Name="label_study_header"
+                                   Text="Study"
+                                   Style="{StaticResource labelHeader}"/>
+                                <Image x:Name="img_study_icon"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Center"
+                                   WidthRequest="30"
+                                   HeightRequest="30"/>
+                            </StackLayout>
                             <Label x:Name="label_course"
-                           Text="Course"
-                           FontSize="20"/>
-                            <Label Text="More info"/>
+                               Text="Course"
+                               FontSize="16"/>
+                            <Label x:Name="label_year"
+                               Text="Year N"
+                               FontSize="16"/>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
